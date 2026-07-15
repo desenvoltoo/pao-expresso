@@ -2,7 +2,8 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#fff8eb" />
   <meta name="description" content="Pão Expresso — pão fresco entregue na sua porta." />
   <title>Pão Expresso | Pão fresco na sua porta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +23,7 @@
       <button class="btn btn-small btn-outline" data-open="login">Entrar</button>
       <button class="btn btn-small" data-open="cadastro">Criar conta</button>
     </nav>
-    <button class="menu-button" id="menuButton" aria-label="Abrir menu">☰</button>
+    <button class="menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false">☰</button>
   </header>
 
   <main>
@@ -32,8 +33,8 @@
         <h1>Seu café da manhã começa na porta de casa.</h1>
         <p>Escolha seus pães favoritos, agende os dias e receba tudo fresquinho, sem precisar sair.</p>
         <div class="hero-actions">
-          <button class="btn btn-large" data-open="agendamento">Agendar entregas</button>
-          <button class="btn btn-large btn-light" data-open="pedido">Fazer pedido avulso</button>
+          <button class="btn btn-large" data-open="agendamento">📅 Agendar entregas</button>
+          <button class="btn btn-large btn-light" data-open="pedido">🥖 Fazer pedido avulso</button>
         </div>
         <div class="hero-proof">
           <span>✓ Sem fidelidade</span>
@@ -92,8 +93,15 @@
     <span class="whatsapp-label">WhatsApp</span>
   </a>
 
+  <nav class="mobile-dock" aria-label="Ações rápidas">
+    <button data-open="pedido"><span>🥖</span><strong>Pedido</strong></button>
+    <button class="mobile-dock-primary" data-open="agendamento"><span>📅</span><strong>Agendar</strong></button>
+    <a href="https://wa.me/5511947999492?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Pão%20Expresso." target="_blank" rel="noopener noreferrer"><span>💬</span><strong>WhatsApp</strong></a>
+  </nav>
+
   <div class="modal-backdrop" id="modalBackdrop" hidden>
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-handle" aria-hidden="true"></div>
       <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
       <div id="modalContent"></div>
     </section>
