@@ -1,42 +1,45 @@
 :root {
-  --brand-beige: #dec6a5;
-  --brand-beige-light: #eed9bc;
+  --brand-beige: #ead2b2;
+  --brand-beige-light: #f4e4cf;
 }
 
 .topbar {
-  background: linear-gradient(90deg, rgba(238, 217, 188, .97), rgba(255, 248, 235, .97) 42%, rgba(255, 253, 248, .97));
-  border-bottom-color: rgba(106, 70, 42, .14);
-  box-shadow: 0 8px 28px rgba(67, 40, 24, .06);
+  background: linear-gradient(90deg, rgba(244,228,207,.98), rgba(255,248,235,.98) 48%, rgba(255,253,248,.98));
+  border-bottom-color: rgba(106,70,42,.14);
+  box-shadow: 0 8px 28px rgba(67,40,24,.06);
 }
 
 .brand {
+  display: inline-flex !important;
+  align-items: center;
   justify-content: center;
   padding: 5px;
   border-radius: 18px;
   background: linear-gradient(145deg, var(--brand-beige-light), var(--brand-beige));
-  border: 1px solid rgba(74, 42, 18, .16);
-  box-shadow: 0 8px 22px rgba(67, 40, 24, .13), inset 0 1px 0 rgba(255, 255, 255, .45);
+  border: 1px solid rgba(74,42,18,.16);
+  box-shadow: 0 8px 22px rgba(67,40,24,.13), inset 0 1px 0 rgba(255,255,255,.45);
   overflow: hidden;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.brand:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 11px 26px rgba(67, 40, 24, .17), inset 0 1px 0 rgba(255, 255, 255, .5);
+  min-width: 68px;
+  min-height: 68px;
 }
 
 .brand-logo {
-  width: 58px;
-  height: 58px;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 58px !important;
+  height: 58px !important;
+  max-width: none !important;
   border-radius: 13px;
   object-fit: cover;
   object-position: center;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal !important;
+  filter: none !important;
 }
 
 footer {
   background: linear-gradient(180deg, #fffdf8, #f7e7cf);
-  border-top-color: rgba(106, 70, 42, .16);
+  border-top-color: rgba(106,70,42,.16);
 }
 
 .footer-brand {
@@ -44,11 +47,13 @@ footer {
   margin: 0 auto 18px;
   padding: 7px;
   border-radius: 25px;
+  min-width: 110px;
+  min-height: 110px;
 }
 
 .footer-logo {
-  width: 96px;
-  height: 96px;
+  width: 96px !important;
+  height: 96px !important;
   border-radius: 20px;
 }
 
@@ -56,32 +61,49 @@ footer {
   .brand {
     padding: 4px;
     border-radius: 16px;
+    min-width: 62px;
+    min-height: 62px;
   }
 
   .brand-logo {
-    width: 52px;
-    height: 52px;
+    width: 52px !important;
+    height: 52px !important;
     border-radius: 12px;
   }
 }
 
 @media (max-width: 640px) {
+  .brand {
+    min-width: 58px;
+    min-height: 58px;
+  }
+
   .brand-logo {
-    width: 48px;
-    height: 48px;
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .footer-brand {
+    min-width: 96px;
+    min-height: 96px;
   }
 
   .footer-logo {
-    width: 82px;
-    height: 82px;
+    width: 82px !important;
+    height: 82px !important;
     border-radius: 18px;
   }
 }
 
 @media (max-width: 380px) {
+  .brand {
+    min-width: 54px;
+    min-height: 54px;
+  }
+
   .brand-logo {
-    width: 44px;
-    height: 44px;
+    width: 44px !important;
+    height: 44px !important;
     border-radius: 11px;
   }
 }
