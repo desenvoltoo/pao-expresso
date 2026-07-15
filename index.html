@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pão Expresso — pão fresco entregue na sua porta." />
+  <title>Pão Expresso | Pão fresco na sua porta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Página inicial Pão Expresso">
+      <span class="brand-icon">🥖</span>
+      <span>Pão <strong>Expresso</strong></span>
+    </a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#produtos">Produtos</a>
+      <button class="btn btn-small btn-outline" data-open="login">Entrar</button>
+      <button class="btn btn-small" data-open="cadastro">Criar conta</button>
+    </nav>
+    <button class="menu-button" id="menuButton" aria-label="Abrir menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="eyebrow">ENTREGA DE PÃO FRESQUINHO</span>
+        <h1>Seu café da manhã começa na porta de casa.</h1>
+        <p>Escolha seus pães favoritos, agende os dias e receba tudo fresquinho, sem precisar sair.</p>
+        <div class="hero-actions">
+          <button class="btn btn-large" data-open="agendamento">Agendar entregas</button>
+          <button class="btn btn-large btn-light" data-open="pedido">Fazer pedido avulso</button>
+        </div>
+        <div class="hero-proof">
+          <span>✓ Sem fidelidade</span>
+          <span>✓ Entrega agendada</span>
+          <span>✓ Pedido fácil</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="delivery-card">
+          <span class="delivery-time">Próxima entrega</span>
+          <strong>Amanhã, 07:00</strong>
+          <div class="mini-order"><span>🥐</span><span>2 Croissants</span></div>
+          <div class="mini-order"><span>🥖</span><span>4 Pães franceses</span></div>
+          <div class="delivery-status">Pedido confirmado ✓</div>
+        </div>
+        <div class="bread bread-one">🥖</div>
+        <div class="bread bread-two">🥐</div>
+      </div>
+    </section>
+
+    <section class="section" id="como-funciona">
+      <div class="section-heading">
+        <span class="eyebrow">SIMPLES E RÁPIDO</span>
+        <h2>Pão quentinho em três passos</h2>
+      </div>
+      <div class="steps">
+        <article class="step-card"><span>01</span><div class="step-icon">👤</div><h3>Faça seu cadastro</h3><p>Informe seus dados e endereço para receber suas entregas.</p></article>
+        <article class="step-card"><span>02</span><div class="step-icon">📅</div><h3>Escolha quando receber</h3><p>Faça um pedido avulso ou programe entregas recorrentes.</p></article>
+        <article class="step-card"><span>03</span><div class="step-icon">🛵</div><h3>Receba fresquinho</h3><p>Nós entregamos no horário escolhido, direto na sua porta.</p></article>
+      </div>
+    </section>
+
+    <section class="section products-section" id="produtos">
+      <div class="section-heading left">
+        <span class="eyebrow">ESCOLHA SEUS FAVORITOS</span>
+        <h2>Os queridinhos do café da manhã</h2>
+      </div>
+      <div class="products" id="productGrid"></div>
+    </section>
+
+    <section class="cta-section">
+      <div><span class="eyebrow light">COMECE AMANHÃ</span><h2>Acorde com o cheirinho de pão fresco.</h2><p>Monte seu pedido agora e deixe o café da manhã por nossa conta.</p></div>
+      <button class="btn btn-light btn-large" data-open="agendamento">Quero agendar</button>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#inicio"><span>🥖</span><span>Pão <strong>Expresso</strong></span></a>
+    <p>Feito para deixar suas manhãs mais gostosas.</p>
+    <small>© 2026 Pão Expresso. Todos os direitos reservados.</small>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
